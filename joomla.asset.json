@@ -1,0 +1,41 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "carcass",
+  "version": "4.0.0",
+  "description": "Carcass is a Joomla 4.x site template",
+  "license": "GPL-2.0+",
+  "assets": [
+    {
+      "name": "template.carcass",
+      "type": "preset",
+      "dependencies": [
+        "template.carcass#style",
+        "template.carcass.bootstrap#style",
+        "template.carcass#script"
+      ]
+    },
+    {
+      "name": "template.carcass",
+      "type": "style",
+      "uri": "carcass.css"
+    },
+    {
+      "name": "template.carcass.bootstrap",
+      "type": "style",
+      "uri": "bootstrap.css",
+      "dependencies": [
+        "fontawesome"
+      ]
+    },
+    {
+      "name": "template.carcass",
+      "type": "script",
+      "uri": "",
+      "dependencies": [
+        "core",
+        "jquery-noconflict",
+        "bootstrap.js.bundle"
+      ]
+    }
+  ]
+}
