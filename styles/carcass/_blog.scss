@@ -251,8 +251,7 @@ body.fifty {
           div.blog-item-content {
             width: 100%;
             font-size: $font-size-small;
-            // border: 1px solid $gainsboro-light;
-            // @include box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+            // border-bottom: 1px solid $gainsboro-light;
 
             figure.item-image {
               width: 100%;

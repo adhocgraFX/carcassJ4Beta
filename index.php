@@ -36,10 +36,11 @@ $tpath     = $this->baseurl . '/templates/' . $this->template;
 $logo = $this->params->get('logo');
 
 // Enable assets
-$wam->usepreset('template.scrapbook');
+$wam->usepreset('template.carcass');
 
 // meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
+$this->setMetaData('X-UA-Compatible', 'IE=edge', 'http-equiv');
 ?>
 
 <!DOCTYPE html>
