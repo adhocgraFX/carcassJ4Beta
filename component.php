@@ -13,12 +13,9 @@ use Joomla\CMS\HTML\HTMLHelper;
 
 /** @var JDocumentHtml $this */
 
-// Add JavaScript Frameworks
-HTMLHelper::_('bootstrap.framework');
-
-// Add Stylesheets
-HTMLHelper::_('stylesheet', 'carcass.css', ['version' => 'auto', 'relative' => true]);
-
+// Enable assets
+$wam = $this->getWebAssetManager();
+$wam->usepreset('template.scrapbook');
 ?>
 
 <!DOCTYPE html>

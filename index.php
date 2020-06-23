@@ -63,9 +63,10 @@ $this->setMetaData('X-UA-Compatible', 'IE=edge', 'http-equiv');
 
 </head>
 
-<body class=" <?php echo $pageclass ?>
-              <?php echo $option . ' view-' . $view . ($layout ? ' layout-' . $layout : ' no-layout') . ($task ? ' task-' . $task : ' no-task'); ?>
-              <?php echo($itemid ? ' itemid-' . $itemid : ''); ?>" role="document">
+<body class="<?php echo $pageclass ?>
+             <?php echo $option . ' view-' . $view . ($layout ? ' layout-' . $layout : ' no-layout') . ($task ? ' task-' . $task : ' no-task'); ?>
+             <?php echo($itemid ? ' itemid-' . $itemid : ''); ?>"
+      role="document">
 
 <header class="app-bar promote-layer" role="banner">
     <section class="app-bar-container">

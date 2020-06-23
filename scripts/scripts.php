@@ -3,11 +3,12 @@
 // analytics
 $analytics = $this->params->get('analytics');
 // cookies
-$c_accept     = $this->params->get('acceptcookie');
-$c_infotext   = $this->params->get('cookieinfotext');
-$c_buttontext = $this->params->get('cookiebuttontext');
-$c_linktext   = $this->params->get('cookielinktext');
-$c_link       = $this->params->get('cookielink');
+$c_accept            = $this->params->get('acceptcookie');
+$c_infotext          = $this->params->get('cookieinfotext');
+$c_acceptbuttontext  = $this->params->get('cookieacceptbuttontext');
+$c_declinebuttontext = $this->params->get('cookiedeclinebuttontext');
+$c_linktext          = $this->params->get('cookielinktext');
+$c_link              = $this->params->get('cookielink');
 // slideshow slider
 $slider = $this->params->get('slideshow');
 // code display
@@ -30,7 +31,8 @@ $prism = $this->params->get('js-prism');
                 <a href="<?php echo htmlspecialchars($c_link); ?>">
 					<?php echo htmlspecialchars($c_linktext); ?></a>
 			<?php endif; ?></p>
-        <button id="accept" class="btn btn-primary"><?php echo htmlspecialchars($c_buttontext); ?></button>
+        <button id="accept" class="btn btn-primary"><?php echo htmlspecialchars($c_acceptbuttontext); ?></button>
+        <button id="decline" class="btn btn-secondary"><?php echo htmlspecialchars($c_declinebuttontext); ?></button>
     </div>
 
     <script type="text/javascript">
@@ -56,6 +58,7 @@ $prism = $this->params->get('js-prism');
 
             var $ca_container = jQuery('#accept-cookie-container');
             var $ca_accept = jQuery('#accept');
+            var $ca_decline = jQuery('#decline');
             var acceptcookie = readCookie('acceptcookie');
             if (!(acceptcookie == "yes")) {
 
@@ -67,6 +70,14 @@ $prism = $this->params->get('js-prism');
                     });
                     $ca_container.slideUp('slow');
                 });
+
+                $ca_decline.click(function () {
+                    setCookie("acceptcookie", "no", 365);
+                    jQuery.post('<?php echo JURI::current(); ?>', 'set_cookie=0', function () {
+                    });
+                    $ca_container.slideUp('slow');
+                });
+
             }
         });
     </script>

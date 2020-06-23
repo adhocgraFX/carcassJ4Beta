@@ -118,11 +118,18 @@
                        rows="4"
                        size="500">
                 </field>
-                <field name="cookiebuttontext"
+                <field name="cookieacceptbuttontext"
                        type="text"
-                       default="Cookie button caption"
-                       label="Cookie button caption"
-                       description="Add your cookie button caption"
+                       default="accept"
+                       label="Cookie accept button caption"
+                       description="Add your cookie accept button caption"
+                       size="30">
+                </field>
+                <field name="cookiedeclinebuttontext"
+                       type="text"
+                       default="decline"
+                       label="Cookie decline button caption"
+                       description="Add your cookie decline button caption"
                        size="30">
                 </field>
                 <field name="cookielinktext"

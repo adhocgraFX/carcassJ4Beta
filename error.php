@@ -31,7 +31,7 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
     <title>Carcass RWD Joomla! template</title>
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo $tpath; ?>/css/template.css" rel="stylesheet">
+    <link href="<?php echo $tpath; ?>./css/carcass.css" rel="stylesheet">
 
     <title><?php echo $this->error->getCode(); ?>
         - <?php echo htmlspecialchars($this->error->getMessage(), ENT_QUOTES, 'UTF-8'); ?></title>
