@@ -10,19 +10,13 @@
       "type": "preset",
       "dependencies": [
         "template.carcass#style",
-        "template.carcass.bootstrap#style",
         "template.carcass#script"
       ]
     },
     {
       "name": "template.carcass",
       "type": "style",
-      "uri": "carcass.css"
-    },
-    {
-      "name": "template.carcass.bootstrap",
-      "type": "style",
-      "uri": "bootstrap.css",
+      "uri": "styles.css",
       "dependencies": [
         "fontawesome"
       ]
@@ -36,6 +30,11 @@
         "jquery-noconflict",
         "bootstrap.js.bundle"
       ]
+    },
+    {
+      "name": "searchtools",
+      "type": "style",
+      "uri": "system/searchtools/searchtools.min.css"
     }
   ]
 }

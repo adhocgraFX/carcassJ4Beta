@@ -18,7 +18,7 @@ use Joomla\CMS\Uri\Uri;
 
 $app  = Factory::getApplication();
 $lang = $app->getLanguage();
-$wam  = $this->getWebAssetManager();
+$wa   = $this->getWebAssetManager();
 
 // Detecting Active Variables
 $option    = $app->input->getCmd('option', '');
@@ -36,7 +36,9 @@ $tpath     = $this->baseurl . '/templates/' . $this->template;
 $logo = $this->params->get('logo');
 
 // Enable assets
-$wam->usepreset('template.carcass');
+$wa->usePreset('template.carcass');
+// register asset
+$wa->registerPreset('template.carcass');
 
 // meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
