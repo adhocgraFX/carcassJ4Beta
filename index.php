@@ -72,9 +72,11 @@ $this->setMetaData('X-UA-Compatible', 'IE=edge', 'http-equiv');
 		<?php if ($this->countModules('nav')): ?>
             <button class="menu" aria-label="Navigation"></button>
 		<?php endif; ?>
+
         <h1 class="logo-text">
             <a href="<?php echo $this->baseurl ?>"><?php echo htmlspecialchars($sitename); ?></a>
         </h1>
+
 		<?php if ($this->countModules('sidebar')): ?>
             <button class="sidebar-menu" aria-label="Sidebar"></button>
 		<?php endif; ?>
@@ -93,11 +95,13 @@ $this->setMetaData('X-UA-Compatible', 'IE=edge', 'http-equiv');
         <h4>Navigation</h4>
 	<?php endif; ?>
 	<?php if ($this->countModules('nav')): ?>
-        <jdoc:include type="modules" name="nav"/>
+        <div class="nav-container">
+            <jdoc:include type="modules" name="nav"/>
+        </div>
 	<?php endif; ?>
 	<?php if ($this->countModules('search')): ?>
         <div class="search-container">
-            <jdoc:include type="modules" name="search" style=" none"/>
+            <jdoc:include type="modules" name="search" style="none"/>
         </div>
 	<?php endif; ?>
 </nav>

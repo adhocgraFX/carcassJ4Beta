@@ -283,12 +283,13 @@ div.search-container {
 
   @include flex(1 1 auto);
   background-color: transparent;
-  margin: 0;
+  // margin: 0;
 
   .card { // bootstrap
     @include justify-content(center);
     background: transparent;
     border: 0;
+    width: 100%;
   }
 
   form.form-search {
@@ -303,39 +304,40 @@ div.search-container {
       @include visuallyhidden;
     }
 
+    .awesomplete {
+      @include flex(1 1 auto);
+      margin: 0;
+      width: 100%;
+
+      input {
+        width: 100%;
+        color: $color-subheading;
+
+        &:focus {
+          color: $color-heading;
+        }
+      }
+    }
+
+    span.input-group-append {
+      @include flex(1 1 auto);
+      margin: 0;
+
+      button {
+        text-align: left;
+        width: max-content;
+
+        span {
+          text-align: right;
+        }
+      }
+    }
+
     div.input-group {
       // flex
       @include flex-display;
       @include flex-flow(row nowrap);
       margin: .5em .25em;
-
-      div.awesomplete {
-        @include flex(1 1 auto);
-        margin: 0;
-
-        input {
-          width: 100%;
-          color: $color-subheading;
-
-          &:focus {
-            color: $color-heading;
-          }
-        }
-      }
-
-      span.input-group-append {
-        @include flex(1 1 auto);
-        margin: 0;
-
-        button {
-          text-align: left;
-          width: max-content;
-
-          span {
-            text-align: right;
-          }
-        }
-      }
     }
   }
 }

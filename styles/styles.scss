@@ -1,8 +1,15 @@
 /*
 template files compiled together
-bootstrap
+bootstrap /
 carcass / scrapbook
+cassiopeia
  */
+
+// carcass-bootstrap variables
+@import "carcass/carcass-bootstrap-variables";
+
+// fontAwesome
+@import "carcass/fontawesome-variables";
 
 // bootstrap
 @import "bootstrap/bootstrap";
@@ -13,6 +20,7 @@ carcass / scrapbook
 /*
 ab hier: elemente aus cassiopeia
  */
+
 // cassiopeia
 @import "vendor/awesomplete";
 @import "vendor/chosen";
